@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+
+  # PHP Service
+  app:
+    volumes:
+      - laravel-volume:/var/www/html
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+
+  # Nginx Service
+  webserver:
+    volumes:
+      - laravel-volume:/var/www/html
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+
+# Docker Volumes
+volumes:
+  laravel-volume:
