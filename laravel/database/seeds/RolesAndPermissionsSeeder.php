@@ -116,5 +116,21 @@ class RolesAndPermissionsSeeder extends Seeder
             'created_at' => date("Y-m-d H:i:s"),
         ]);
         $user->assignRole($role3);
+
+        $user = Factory(App\User::class)->create([
+            'name' => 'Edouard UZNANSKI',
+            'email' => 'edouard.uznanski2019@campus-eni.fr',
+            'password' => bcrypt('stages'),
+            'created_at' => date("Y-m-d H:i:s"),
+        ]);
+        $user->assignRole($role4);
+
+        $user = Factory(App\User::class)->create([
+            'name' => 'Sylvain LANGER',
+            'email' => 'sylvain.langer2019@campus-eni.fr',
+            'password' => bcrypt('stages'),
+            'created_at' => date("Y-m-d H:i:s"),
+        ]);
+        $user->assignRole($role4);
     }
 }
